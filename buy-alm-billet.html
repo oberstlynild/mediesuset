@@ -1,0 +1,165 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediesuset festival :: Almindelig Billet</title>
+    <script src="https://kit.fontawesome.com/727fcb130f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/loader.css">
+</head>
+
+<body onload="loadPage()">
+    <div class="loader"></div>
+    <div class="loader-wrapper">
+        <header>
+            <nav class="main-navigation">
+                <div class="main-navigation-left">
+                    <img src="images/mediehuset-logo.png" alt="mediesusets logo">
+                    <p class="main-navigation-overskrift"><span class="bold-text">MEDIE</span>SUSET</p><br>
+                    <p class="main-navigation-datoer bold-text">4 - 5 - 6 - 7. JULI 2020</p>
+                </div>
+                <div class="main-navigation-right">
+                    <a href="buy-billet.html"><button class="main-navigation-billet-desktop">KØB BILLET</button></a>
+                    <a href="index.html">NYHEDER</a>
+                    <div class="dropdown">
+                        <a>EVENTS</a>
+                        <div class="dropdown-content">
+                            <a href="program.html">PROGRAM</a>
+                            <a href="lineup.html">LINEUP</a>
+                        </div>
+                    </div>
+                    <a href="camps.html">CAMPS</a>
+                    <a href="praktisk-info.html">PRAKTISK INFO</a>
+                    <a href="login.html" id="main-menu-login-desktop">LOGIN</a>
+                    <div class="dropdown" id="main-menu-min-side-desktop">
+                        <a>MIN SIDE</a>
+                        <div class="dropdown-content">
+                            <a href="mit-program.html">MIT PROGRAM</a>
+                            <a href="log-ud.html">LOG UD</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="main-navigation-mobile">
+                <p class="main-navigation-overskrift-mobile"><span class="bold-text">MEDIE</span>SUSET</p><br>
+                <p class="main-navigation-datoer-mobile">4 - 5 - 6 - 7. JULI 2020</p>
+                <img src="images/mediehuset-logo.png" alt="mediesusets logo">
+                <a href="index.html">NYHEDER</a>
+                <div class="dropdown">
+                    <a>EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="program.html">PROGRAM</a>
+                        <a href="lineup.html">LINEUP</a>
+                    </div>
+                </div>
+                <a href="camps.html">CAMPS</a>
+                <a href="praktisk-info.html">PRAKTISK INFO</a>
+                <a href="login.html" id="main-menu-login-mobile">LOGIN</a>
+                <div class="dropdown" id="main-menu-min-side-mobile">
+                    <a>MIN SIDE</a>
+                    <div class="dropdown-content">
+                        <a href="mit-program.html">MIT PROGRAM</a>
+                        <a href="log-ud.html">LOG UD</a>
+                    </div>
+                </div>
+                <a href="buy-billet.html"><button class="main-navigation-billet-desktop">KØB BILLET</button></a>
+            </nav>
+        </header>
+
+        <section id="forside-section-seperator"></section>
+
+        <section class="buy-billet-bestilling" id="buy-billet-bestilling">
+            <h2>KØB BILLET</h2>
+            <h3>INFORMATION OM DEN VALGTE BILLET</h3>
+            <h4>Almindeligt partout billet - 4 dage</h4>
+            <p class="buy-billet-bestilling-tekst">
+                Billetten giver adgang til Mediesusets festivalplads fra onsdag d. 4. juli til lørdag d. 7. juli.<br><br> Billetten ombyttes til et 4-dages armbånd ved en af billetvognene ved indgangen til festivalpladsen.<br><br> Billetten giver fri
+                adgang til festivalpladsen, alle festivelpladsens scener, spisesteder og aktiviteter.
+            </p>
+            <h3>BESTILLING</h3>
+            <form id="buy-ticket-form" onsubmit="validateTicket()">
+                <div class="bestilling-form-left-side">
+                    <p class="bestilling-overskrifter">Reserver Camp Plads</p>
+                    <label for="bestilling-camp" id="bestilling-camp-label">Vælg en camp:</label><br>
+                    <select id="bestilling-camp" name="camp">
+                      <option value="1">Camp Colorit</option>
+                      <option value="2">Camp Kultunaut</option>
+                      <option value="3">Camp Deluxe</option>
+                    </select>
+                    <p class="bestilling-overskrifter">
+                        Indtast oplysninger
+                    </p>
+                    <label for="bestilling-email" id="bestilling-email-label">Email:</label><br>
+                    <input type="text" placeholder="Indtast din email" id="bestilling-email" name="bestiling-email"><br>
+                    <label for="bestilling-adgangskode" id="bestilling-adgangskode-label">Adgangskode:</label><br>
+                    <input type="text" placeholder="Indtast din adgangskode" id="bestilling-adgangskode" name="bestilling-adgangskode"><br>
+                    <label for="bestilling-gentag-adgangskode" id="bestilling-gentag-adgangskode-label">Gentag adgangskode:</label><br>
+                    <input type="text" placeholder="Gentag adgangskode" id="bestilling-gentag-adgangskode" name="bestilling-gentag-adgangskode"><br>
+                    <label for="bestilling-navn" id="bestilling-navn-label">Navn:</label><br>
+                    <input type="text" placeholder="Indtast dit navn" id="bestilling-navn" name="bestiling-navn"><br>
+                    <label for="bestilling-adresse" id="bestilling-adresse-label">Adresse:</label><br>
+                    <input type="text" placeholder="Indtast din adresse" id="bestilling-adresse" name="bestiling-adresse"><br>
+                    <div class="bestilling-form-left-side-grid">
+                        <label for="bestilling-postnummer" id="bestilling-postnummer-label">Postnummer:</label><br>
+                        <input type="text" placeholder="Indtast postnummer" id="bestilling-postnummer" name="bestiling-postnummer"><br>
+                        <label for="bestilling-by" id="bestilling-by-label">By:</label><br>
+                        <input type="text" placeholder="Indtast bynavn" id="bestilling-by" name="bestiling-by"><br>
+                    </div>
+                </div>
+                <div class="bestilling-form-right-side">
+                    <p class="bestilling-overskrifter">Vælg forsendelsesmetode</p>
+                    <p class="bestilling-forsendelse-error" id="forsendelse-error">Vælg en måde at få fremsendt dine billetter på!</p>
+                    <div class="bestilling-tilsendt-wrapper">
+                        <input type="radio" id="bestilling-tilsendt" name="bestilling-forsendelse" value="paper">
+                        <label for="bestilling-tilsendt" id="bestilling-tilsendt-label"><span class="bold-text">Jeg ønsker billetterne tilsendt.</span><br><span class="normal-text">Vi sender billetterne til dig med posten.</span></label>
+                    </div>
+                    <div class="bestilling-printet-wrapper">
+                        <input type="radio" id="bestilling-udskrevet" name="bestilling-forsendelse" value="print">
+                        <label for="bestilling-udskrevet-label" id="bestilling-udskrevet-label"><span class="bold-text">Jeg udskriver billetterne selv.</span><br><span class="normal-text">Du modtager billetterne på din e-mail. Du kan så selv udskrive dem, og du sparer således forsendelses-gebyret.</span></label><br>
+                    </div>
+                    <input type="submit" value="SEND">
+                </div>
+            </form>
+        </section>
+
+        <section class="follow-us-footer">
+            <h2>FØLG OS</h2>
+            <a href="https://www.facebook.com/orangefeeling/?ref=br_rs">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/orangefeeling?lang=da">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </section>
+
+        <section class="nyhedsbrev-footer">
+            <h2>TILMELD NYHEDSBREV</h2>
+            <h4>Få seneste nyt sendt direkte til din indbakke</h4>
+            <p id="nyhedsbrev-error"></p>
+            <form onsubmit="validerNyhedsbrevDesktop()" class="nyhedsbrev-form-desktop" id="nyhedsbrev-form-desktop">
+                <input type="text" placeholder="INDTAST DIN EMAIL" id="nyhedsbrev-email-desktop">
+                <input type="submit" value="TILMELD NYHEDSBREV">
+            </form>
+            <form onsubmit="validerNyhedsbrevMobile()" class="nyhedsbrev-form-mobile" id="nyhedsbrev-form-mobile">
+                <input type="text" placeholder="DIN MAIL" id="nyhedsbrev-email-mobile">
+                <input type="submit" value="TILMELD">
+            </form>
+        </section>
+
+        <section class="footer-section-seperator">
+            <img src="images/Hancock-kvalitet-logo.png" alt="hancock logo med rød høne">
+            <p>- smag forskellen ...</p>
+        </section>
+
+    </div>
+
+    <script src="js/alm-billet.js"></script>
+    <script src="js/menu-fixer.js"></script>
+    <script src="js/nyhedsbrev.js"></script>
+</body>
+
+</html>

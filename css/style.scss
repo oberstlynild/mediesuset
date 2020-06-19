@@ -1,0 +1,1344 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+
+/*Prefix*/
+
+.bold-text {
+    font-weight: bold;
+}
+
+.normal-text {
+    font-weight: 400 !important;
+}
+
+.uppercase-text {
+    text-transform: uppercase;
+}
+
+#main-menu-min-side-desktop,
+#main-menu-min-side-mobile {
+    display: none;
+}
+
+$roedscene: #A33A49;
+$blaascene: #396999;
+$groenscene: #6B8846;
+$lillascene: #80347C;
+
+/*STYLES*/
+
+
+/*SECTION SEPERATOR*/
+
+#forside-section-seperator {
+    background-image: url("../images/roskilde-stemning.jpg");
+    background-size: cover;
+    background-position: bottom;
+    height: 500px;
+    width: 100%;
+}
+
+#camps-section-seperator {
+    background-size: cover;
+    background-position: bottom;
+    height: 500px;
+    width: 100%;
+}
+
+
+/*NYHEDER*/
+
+#forside-nyheder {
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 50px;
+    }
+    #nyheder-grid {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        .nyheder-grid-item {
+            background-color: #f3f3f3;
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            h3 {
+                font-size: 25px;
+                margin-left: 15px;
+                margin-right: 15px;
+                height: 85px;
+                overflow: hidden;
+            }
+            p {
+                font-size: 20px;
+                margin-left: 15px;
+                margin-right: 15px;
+                height: 100px;
+                overflow: hidden;
+                background: -webkit-linear-gradient(#111, #f3f3f3);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 50px;
+            }
+            .nyheds-knap {
+                position: relative;
+                bottom: 20px;
+                button {
+                    cursor: pointer;
+                    width: 90%;
+                    height: 50px;
+                    margin-left: 5%;
+                    color: white;
+                    background-color: black;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+#nyheder-aktuel-nyhed {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    h2 {
+        font-size: 35px;
+        line-height: 0;
+    }
+    .aktuel-nyhed-forfatter {
+        font-size: 16px;
+        color: #525252;
+    }
+    .aktuel-nyhed-tid {
+        font-size: 14px;
+        color: #757575;
+    }
+    img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #forside-nyheder {
+        #nyheder-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+/*FØLG OS*/
+
+.follow-us-footer {
+    padding: 50px;
+    background-color: #121212;
+    text-align: center;
+    h2 {
+        color: #fff;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    i {
+        cursor: pointer;
+        margin: 15px;
+        background-color: #333;
+        border-radius: 100px;
+        color: #fff;
+        display: inline-block;
+        height: 100px;
+        line-height: 100px;
+        width: 100px;
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+
+/*NYHEDSBREV*/
+
+.nyhedsbrev-footer {
+    padding: 50px;
+    background-image: url("../images/roskilde-stemning-sort-hvid.jpg");
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 165px; //halvdelen af højden af hancock billedet + 15 px;
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    h4 {
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        padding-top: 15px;
+        padding-bottom: 25px;
+    }
+    #nyhedsbrev-error {
+        color: $roedscene;
+        text-align: center;
+        font-size: 20px;
+    }
+    .nyhedsbrev-form-desktop {
+        margin-top: 50px;
+        border: 1px solid white;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 50px;
+        input {
+            width: 49%;
+        }
+        input[type="text"] {
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            outline: 0;
+            color: white;
+        }
+        input[type="submit"] {
+            color: white;
+            background-color: rgba(248, 78, 78, 0.5);
+            border: none;
+            font-size: 20px;
+            margin-top: 5px;
+            padding-top: 10px;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+    }
+    .nyhedsbrev-form-mobile {
+        display: none;
+        margin-top: 50px;
+        border: 1px solid white;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 50px;
+        input {
+            width: 100%;
+            text-align: center;
+        }
+        input[type="text"] {
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            outline: 0;
+            color: white;
+        }
+        input[type="submit"] {
+            color: white;
+            background-color: rgba(248, 78, 78, 0.5);
+            border: none;
+            font-size: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .nyhedsbrev-footer {
+        .nyhedsbrev-form-desktop {
+            display: none;
+        }
+        .nyhedsbrev-form-mobile {
+            display: block;
+        }
+    }
+}
+
+
+/*HANCOCK*/
+
+.footer-section-seperator {
+    background-color: #121212;
+    height: 300px;
+    img {
+        height: 300px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        bottom: 150px; //Kræver nok at det er 150px ektra padding i bunden af div ovenover
+    }
+    p {
+        color: #c6ac6a;
+        font-size: 25px;
+        font-style: italic;
+        text-align: center;
+        position: relative;
+        bottom: 150px;
+    }
+}
+
+
+/*PROGRAM*/
+
+#program {
+    padding: 50px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    #program-menu {
+        padding-top: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-bottom: 35px;
+    }
+    button {
+        border: none;
+        background-color: #121212;
+        color: white;
+        height: 100px;
+        font-size: 25px;
+        outline: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #program-menu-onsdag {
+        background-color: $blaascene;
+        &:hover {
+            background-color: $blaascene !important;
+        }
+    }
+    #program-menu-torsdag {
+        &:hover {
+            background-color: $roedscene !important;
+        }
+    }
+    #program-menu-fredag {
+        &:hover {
+            background-color: $groenscene !important;
+        }
+    }
+    #program-menu-lørdag {
+        &:hover {
+            background-color: $lillascene !important;
+        }
+    }
+    #program-roed-scene-overskrift {
+        color: white;
+        height: 100px;
+        line-height: 100px;
+        background-color: $roedscene;
+    }
+    #program-blaa-scene-overskrift {
+        color: white;
+        height: 100px;
+        line-height: 100px;
+        background-color: $blaascene;
+    }
+    #program-groen-scene-overskrift {
+        color: white;
+        height: 100px;
+        line-height: 100px;
+        background-color: $groenscene;
+    }
+    #program-lilla-scene-overskrift {
+        color: white;
+        height: 100px;
+        line-height: 100px;
+        background-color: $lillascene;
+    }
+}
+
+#program {
+    /*RØD*/
+    #program-roed-scene {
+        #program-roed-scene-items {
+            padding-bottom: 50px;
+            .program-item {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                background-color: #f3f3f3;
+                border-bottom: 1px solid $roedscene;
+                &:hover {
+                    background-color: #dbdbdb;
+                    cursor: pointer;
+                }
+                .program-item-tidspunkt {
+                    text-align: center;
+                    height: 100px;
+                    line-height: 100px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                .program-type-kunstner-placeholder {
+                    .program-item-kunstner {
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin: 0;
+                        margin-top: 50px;
+                    }
+                    .program-item-type {
+                        margin: 0;
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .program-day-onsdag-data {
+                display: grid;
+            }
+            .program-day-torsdag-data {
+                display: none;
+            }
+            .program-day-fredag-data {
+                display: none;
+            }
+            .program-day-lørdag-data {
+                display: none;
+            }
+        }
+    }
+    /*BLÅ*/
+    #program-blaa-scene {
+        #program-blaa-scene-items {
+            padding-bottom: 50px;
+            .program-item {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                background-color: #f3f3f3;
+                border-bottom: 1px solid $blaascene;
+                &:hover {
+                    background-color: #dbdbdb;
+                    cursor: pointer;
+                }
+                .program-item-tidspunkt {
+                    text-align: center;
+                    height: 100px;
+                    line-height: 100px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                .program-type-kunstner-placeholder {
+                    .program-item-kunstner {
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin: 0;
+                        margin-top: 50px;
+                    }
+                    .program-item-type {
+                        margin: 0;
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .program-day-onsdag-data {
+                display: grid;
+            }
+            .program-day-torsdag-data {
+                display: none;
+            }
+            .program-day-fredag-data {
+                display: none;
+            }
+            .program-day-lørdag-data {
+                display: none;
+            }
+        }
+    }
+    /*GRØN*/
+    #program-groen-scene {
+        #program-groen-scene-items {
+            padding-bottom: 50px;
+            .program-item {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                background-color: #f3f3f3;
+                border-bottom: 1px solid $groenscene;
+                &:hover {
+                    background-color: #dbdbdb;
+                    cursor: pointer;
+                }
+                .program-item-tidspunkt {
+                    text-align: center;
+                    height: 100px;
+                    line-height: 100px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                .program-type-kunstner-placeholder {
+                    .program-item-kunstner {
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin: 0;
+                        margin-top: 50px;
+                    }
+                    .program-item-type {
+                        margin: 0;
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .program-day-onsdag-data {
+                display: grid;
+            }
+            .program-day-torsdag-data {
+                display: none;
+            }
+            .program-day-fredag-data {
+                display: none;
+            }
+            .program-day-lørdag-data {
+                display: none;
+            }
+        }
+    }
+    /*LILLA*/
+    #program-lilla-scene {
+        #program-lilla-scene-items {
+            padding-bottom: 50px;
+            .program-item {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                background-color: #f3f3f3;
+                border-bottom: 1px solid $lillascene;
+                &:hover {
+                    background-color: #dbdbdb;
+                    cursor: pointer;
+                }
+                .program-item-tidspunkt {
+                    text-align: center;
+                    height: 100px;
+                    line-height: 100px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                .program-type-kunstner-placeholder {
+                    .program-item-kunstner {
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin: 0;
+                        margin-top: 50px;
+                    }
+                    .program-item-type {
+                        margin: 0;
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .program-day-onsdag-data {
+                display: grid;
+            }
+            .program-day-torsdag-data {
+                display: none;
+            }
+            .program-day-fredag-data {
+                display: none;
+            }
+            .program-day-lørdag-data {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #program {
+        #program-roed-scene-items {
+            .program-type-kunstner-placeholder {
+                text-align: center;
+            }
+        }
+        #program-blaa-scene-items {
+            .program-type-kunstner-placeholder {
+                text-align: center;
+            }
+        }
+        #program-groen-scene-items {
+            .program-type-kunstner-placeholder {
+                text-align: center;
+            }
+        }
+        #program-lilla-scene-items {
+            .program-type-kunstner-placeholder {
+                text-align: center;
+            }
+        }
+        #program-menu {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+/*LINEUP*/
+
+#line-up {
+    padding: 50px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    #line-up-menu {
+        padding-top: 25px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+        margin-bottom: 35px;
+        button {
+            border: none;
+            background-color: #121212;
+            color: white;
+            height: 100px;
+            font-size: 25px;
+            outline: none;
+        }
+        #line-up-menu-all {
+            background-color: #2c2c2c;
+        }
+    }
+    #line-up-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        color: white;
+        div {
+            cursor: pointer;
+        }
+        img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+        }
+        h3,
+        p {
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+            font-size: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}
+
+#line-up {
+    #line-up-items {
+        .stage-1-data {
+            background-color: $roedscene;
+        }
+        .stage-2-data {
+            background-color: $blaascene;
+        }
+        .stage-3-data {
+            background-color: $groenscene;
+        }
+        .stage-4-data {
+            background-color: $lillascene;
+        }
+    }
+}
+
+#line-up {
+    #line-up-menu-all {
+        &:hover {
+            cursor: pointer;
+            background-color: #2c2c2c;
+        }
+    }
+    #line-up-menu-roed {
+        &:hover {
+            cursor: pointer;
+            background-color: $roedscene;
+        }
+    }
+    #line-up-menu-blaa {
+        &:hover {
+            cursor: pointer;
+            background-color: $blaascene;
+        }
+    }
+    #line-up-menu-groen {
+        &:hover {
+            cursor: pointer;
+            background-color: $groenscene;
+        }
+    }
+    #line-up-menu-lilla {
+        &:hover {
+            cursor: pointer;
+            background-color: $lillascene;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #line-up {
+        #line-up-menu {
+            grid-template-columns: 1fr;
+        }
+        #line-up-items {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+/*ARTIST*/
+
+#artist-details {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    h2 {
+        font-size: 35px;
+        line-height: 0;
+    }
+    .artist-tidspunkt {
+        font-size: 14px;
+        color: #757575;
+    }
+    img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+    .artist-like-knap {
+        position: absolute;
+        right: 10%;
+        margin-top: 65px;
+        border: none;
+        background-color: $groenscene;
+        color: white;
+        font-size: 15px;
+        height: 30px;
+        width: 200px;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .artist-dislike-knap {
+        position: absolute;
+        right: 10%;
+        margin-top: 65px;
+        border: none;
+        background-color: $roedscene;
+        color: white;
+        font-size: 15px;
+        height: 30px;
+        width: 200px;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .fa-facebook-f {
+        cursor: pointer;
+        margin: 15px;
+        background-color: #333;
+        border-radius: 100px;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        width: 50px;
+        font-size: 25px;
+        text-align: center;
+        float: right;
+    }
+}
+
+
+/*CAMPS*/
+
+#camps {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    h4 {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+}
+
+#camps-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    .camp-item {
+        background-color: #f3f3f3;
+    }
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .camp-item-navn {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .camp-item-beskrivelse {
+        height: 130px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+    .camp-item-info-wrapper {
+        .camp-item-adgang {
+            margin: 0;
+            margin-bottom: 5px;
+            margin-left: 15px;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .camp-item-antal-pladser {
+            margin: 0;
+            margin-bottom: 5px;
+            margin-left: 15px;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .camp-item-ledige-pladser {
+            margin: 0;
+            margin-bottom: 5px;
+            margin-left: 15px;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+    }
+    button {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 90%;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        margin-left: 5%;
+        height: 50px;
+        font-size: 20px;
+        &:hover {
+            cursor: pointer;
+            background-color: $blaascene;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #camps-grid {
+        .camp-item-beskrivelse {
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #camps-grid {
+        .camp-item-beskrivelse {
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #camps-grid {
+        grid-template-columns: 1fr;
+        .camp-item-beskrivelse {
+            height: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #camps-grid {
+        grid-template-columns: 1fr;
+        .camp-item-beskrivelse {
+            height: 200px;
+        }
+    }
+}
+
+
+/*CAMP DETAJLER*/
+
+#camps-details {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    .camp-detajle-titel {
+        font-size: 35px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .camp-detajle-beskrivelse {
+        padding-top: 15px;
+    }
+    .camp-detajle-adgang-item,
+    .camp-detajle-facilitet-item {
+        margin: 0;
+        font-size: 15px;
+    }
+}
+
+
+/*Praktisk info*/
+
+#praktisk-info-section {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    h3 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    h4 {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+    p {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+
+/*LOGIN*/
+
+#login-section {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    form {
+        width: 50%;
+        label {
+            display: block;
+            width: 100%;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            height: 50px;
+            text-indent: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-family: "Lato", sans-serif;
+        }
+        input[type="submit"] {
+            width: 50%;
+            float: right;
+            background-color: $blaascene;
+            outline: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            height: 80px;
+            &:hover {
+                cursor: pointer;
+                background-color: $roedscene;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #login-section {
+        form {
+            width: 100%;
+            input[type="submit"] {
+                width: 100%;
+                height: 50px;
+            }
+        }
+    }
+}
+
+
+/*MIT PROGRAM*/
+
+#mit-program-onsdag,
+#mit-program-torsdag,
+#mit-program-fredag,
+#mit-program-lørdag {
+    margin-top: 35px;
+}
+
+#mit-program {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    .mit-program-overskrift {
+        color: white;
+        height: 100px;
+        line-height: 100px;
+        background-color: #2c2c2c;
+        text-indent: 20px;
+        margin: 0;
+    }
+    .mit-program-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        border-bottom: 1px solid black;
+        .mit-program-roed-item {
+            color: white;
+            background-color: $roedscene;
+            text-indent: 10px;
+            text-transform: uppercase;
+        }
+        .mit-program-groen-item {
+            color: white;
+            background-color: $groenscene;
+            text-indent: 10px;
+            text-transform: uppercase;
+        }
+        .mit-program-blaa-item {
+            color: white;
+            background-color: $blaascene;
+            text-indent: 10px;
+            text-transform: uppercase;
+        }
+        .mit-program-lilla-item {
+            color: white;
+            background-color: $lillascene;
+            text-indent: 10px;
+            text-transform: uppercase;
+        }
+        .mit-program-kunstner-item {
+            color: black;
+            text-indent: 20px;
+        }
+        i {
+            font-size: 20px;
+            position: absolute;
+            right: 15%;
+            margin-top: -40px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #mit-program {
+        text-align: center;
+        .mit-program-item {
+            grid-template-columns: 1fr;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            .mit-program-kunstner-item {
+                text-indent: 0px;
+            }
+        }
+    }
+}
+
+
+/*KØB BILLET*/
+
+.buy-billet-item {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    background-color: #f3f3f3;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    &:hover {
+        background-color: #dbdbdb;
+    }
+    h4 {
+        text-indent: 30px;
+    }
+    button {
+        float: right;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .buy-billet-item {
+        text-align: center;
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
+        h4 {
+            margin: 20px;
+            text-indent: 0;
+        }
+        button {
+            float: none;
+            right: 0px;
+            top: 40px;
+        }
+    }
+}
+
+.buy-billet-item-knap-style {
+    height: 50px;
+    background-color: #a33a49;
+    color: #fff;
+    font-weight: 600;
+    width: 150px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#buy-billet-alle-dage,
+#buy-billet-enkeltdags {
+    margin-top: 35px;
+}
+
+#buy-billet {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    .buy-billet-overskrift {
+        color: white;
+        height: 100px;
+        line-height: 100px;
+        background-color: #2c2c2c;
+        text-indent: 20px;
+        margin: 0;
+    }
+}
+
+
+/*KØB BILLET BESTILLING*/
+
+.buy-billet-bestilling {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 30px;
+    }
+    h3 {
+        font-size: 25px;
+        color: white;
+        height: 100px;
+        line-height: 100px;
+        background-color: #2c2c2c;
+        text-indent: 20px;
+        margin: 0;
+    }
+    h4 {
+        text-indent: 30px;
+        font-size: 20px;
+    }
+    .buy-billet-bestilling-tekst {
+        position: relative;
+        left: 30px;
+        right: 30px;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+    .bestilling-overskrifter {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    label {
+        font-weight: bold;
+        font-family: "Lato", sans-serif;
+        font-size: 17px;
+    }
+    select {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 40px;
+        font-size: 15px;
+        background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat;
+        background-position: right 15px top;
+        /* Change the px value here to change the distance */
+        -moz-appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 4px 20px
+    }
+    input {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 40px;
+        text-indent: 15px;
+        font-size: 15px;
+        font-family: "Lato", sans-serif;
+    }
+    input[type="submit"] {
+        width: 50%;
+        font-size: 20px;
+        height: 80px;
+        float: right;
+        background-color: $blaascene;
+        border: none;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: 480px;
+        cursor: pointer;
+    }
+    .bestilling-form-right-side {
+        div {
+            display: grid;
+            grid-template-columns: 1fr 7fr;
+        }
+    }
+    .bestilling-forsendelse-error {
+        font-weight: bold;
+        font-family: "Lato", sans-serif;
+        font-size: 17px;
+        color: red;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .buy-billet-bestilling {
+        form {
+            grid-template-columns: 1fr;
+        }
+        h3 {
+            font-size: 15px;
+            text-indent: 0;
+            text-align: center;
+        }
+        h4 {
+            font-size: 15px;
+            text-indent: 0;
+        }
+        .buy-billet-bestilling-tekst {
+            font-size: 13px;
+            left: 0px;
+        }
+        .bestilling-overskrifter {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            width: 100%;
+            top: 0px;
+        }
+        .bestilling-form-right-side {
+            div {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+            }
+        }
+        .bestilling-forsendelse-error {
+            font-weight: bold;
+            font-family: "Lato", sans-serif;
+            font-size: 17px;
+            color: red;
+            text-indent: 0px;
+        }
+    }
+}
+
+#tak-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 30px;
+    }
+    p {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+}

@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediesuset festival :: Camps</title>
+    <script src="https://kit.fontawesome.com/727fcb130f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+</head>
+
+<body onload="fetchCamps()">
+    <div class="loader"></div>
+    <div class="loader-wrapper">
+        <header>
+            <nav class="main-navigation">
+                <div class="main-navigation-left">
+                    <img src="images/mediehuset-logo.png" alt="mediesusets logo">
+                    <p class="main-navigation-overskrift"><span class="bold-text">MEDIE</span>SUSET</p><br>
+                    <p class="main-navigation-datoer bold-text">4 - 5 - 6 - 7. JULI 2020</p>
+                </div>
+                <div class="main-navigation-right">
+                    <a href="buy-billet.html"><button class="main-navigation-billet-desktop">KØB BILLET</button></a>
+                    <a href="index.html">NYHEDER</a>
+                    <div class="dropdown">
+                        <a>EVENTS</a>
+                        <div class="dropdown-content">
+                            <a href="program.html">PROGRAM</a>
+                            <a href="lineup.html">LINEUP</a>
+                        </div>
+                    </div>
+                    <a href="camps.html">CAMPS</a>
+                    <a href="praktisk-info.html">PRAKTISK INFO</a>
+                    <a href="login.html" id="main-menu-login-desktop">LOGIN</a>
+                    <div class="dropdown" id="main-menu-min-side-desktop">
+                        <a>MIN SIDE</a>
+                        <div class="dropdown-content">
+                            <a href="mit-program.html">MIT PROGRAM</a>
+                            <a href="log-ud.html">LOG UD</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="main-navigation-mobile">
+                <p class="main-navigation-overskrift-mobile"><span class="bold-text">MEDIE</span>SUSET</p><br>
+                <p class="main-navigation-datoer-mobile">4 - 5 - 6 - 7. JULI 2020</p>
+                <img src="images/mediehuset-logo.png" alt="mediesusets logo">
+                <a href="index.html">NYHEDER</a>
+                <div class="dropdown">
+                    <a>EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="program.html">PROGRAM</a>
+                        <a href="lineup.html">LINEUP</a>
+                    </div>
+                </div>
+                <a href="camps.html">CAMPS</a>
+                <a href="praktisk-info.html">PRAKTISK INFO</a>
+                <a href="login.html" id="main-menu-login-mobile">LOGIN</a>
+                <div class="dropdown" id="main-menu-min-side-mobile">
+                    <a>MIN SIDE</a>
+                    <div class="dropdown-content">
+                        <a href="mit-program.html">MIT PROGRAM</a>
+                        <a href="log-ud.html">LOG UD</a>
+                    </div>
+                </div>
+                <a href="buy-billet.html"><button class="main-navigation-billet-desktop">KØB BILLET</button></a>
+            </nav>
+        </header>
+
+        <section id="camps">
+            <h2>CAMPS</h2>
+            <h4>
+                På Mediasuset finder du tre camp områder som hver skiller sig ud med deres specielle stemning om du enten er til fest og ballade eller komfort og service på højt niveau. På alle camp områder er der adgang til forplejning i form af mad og drikke, og toilet
+                og bade faciliteter.<br> Camp områderne er placeret tæt på festivalpladsen så at væres gæster hurtigt kan komme til og fra områderne i mellem de mange events.<br> Det er muligt at reservere pladser på de forskellige camp
+                områder - dog kræver Camp kultunaut og De Luxe 4 dages partout armbånd og De Luxe armbånd. Reservation kan foretages når du bestiller billet.
+            </h4>
+            <div id="camps-grid">
+
+            </div>
+        </section>
+
+        <section class="follow-us-footer">
+            <h2>FØLG OS</h2>
+            <a href="https://www.facebook.com/orangefeeling/?ref=br_rs">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/orangefeeling?lang=da">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </section>
+
+        <section class="nyhedsbrev-footer">
+            <h2>TILMELD NYHEDSBREV</h2>
+            <h4>Få seneste nyt sendt direkte til din indbakke</h4>
+            <p id="nyhedsbrev-error"></p>
+            <form onsubmit="validerNyhedsbrevDesktop()" class="nyhedsbrev-form-desktop" id="nyhedsbrev-form-desktop">
+                <input type="text" placeholder="INDTAST DIN EMAIL" id="nyhedsbrev-email-desktop">
+                <input type="submit" value="TILMELD NYHEDSBREV">
+            </form>
+            <form onsubmit="validerNyhedsbrevMobile()" class="nyhedsbrev-form-mobile" id="nyhedsbrev-form-mobile">
+                <input type="text" placeholder="DIN MAIL" id="nyhedsbrev-email-mobile">
+                <input type="submit" value="TILMELD">
+            </form>
+        </section>
+
+        <section class="footer-section-seperator">
+            <img src="images/Hancock-kvalitet-logo.png" alt="hancock logo med rød høne">
+            <p>- smag forskellen ...</p>
+        </section>
+    </div>
+
+    <script src="js/fetchCamps.js"></script>
+    <script src="js/menu-fixer.js"></script>
+    <script src="js/nyhedsbrev.js"></script>
+</body>
+
+</html>

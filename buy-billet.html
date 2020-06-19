@@ -1,0 +1,182 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediesuset festival :: Køb Billet</title>
+    <script src="https://kit.fontawesome.com/727fcb130f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/loader.css">
+</head>
+
+<body onload="fetchTickets()">
+    <div class="loader"></div>
+    <div class="loader-wrapper">
+        <header>
+            <nav class="main-navigation">
+                <div class="main-navigation-left">
+                    <img src="images/mediehuset-logo.png" alt="mediesusets logo">
+                    <p class="main-navigation-overskrift"><span class="bold-text">MEDIE</span>SUSET</p><br>
+                    <p class="main-navigation-datoer bold-text">4 - 5 - 6 - 7. JULI 2020</p>
+                </div>
+                <div class="main-navigation-right">
+                    <a href="buy-billet.html"><button class="main-navigation-billet-desktop">KØB BILLET</button></a>
+                    <a href="index.html">NYHEDER</a>
+                    <div class="dropdown">
+                        <a>EVENTS</a>
+                        <div class="dropdown-content">
+                            <a href="program.html">PROGRAM</a>
+                            <a href="lineup.html">LINEUP</a>
+                        </div>
+                    </div>
+                    <a href="camps.html">CAMPS</a>
+                    <a href="praktisk-info.html">PRAKTISK INFO</a>
+                    <a href="login.html" id="main-menu-login-desktop">LOGIN</a>
+                    <div class="dropdown" id="main-menu-min-side-desktop">
+                        <a>MIN SIDE</a>
+                        <div class="dropdown-content">
+                            <a href="mit-program.html">MIT PROGRAM</a>
+                            <a href="log-ud.html">LOG UD</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="main-navigation-mobile">
+                <p class="main-navigation-overskrift-mobile"><span class="bold-text">MEDIE</span>SUSET</p><br>
+                <p class="main-navigation-datoer-mobile">4 - 5 - 6 - 7. JULI 2020</p>
+                <img src="images/mediehuset-logo.png" alt="mediesusets logo">
+                <a href="index.html">NYHEDER</a>
+                <div class="dropdown">
+                    <a>EVENTS</a>
+                    <div class="dropdown-content">
+                        <a href="program.html">PROGRAM</a>
+                        <a href="lineup.html">LINEUP</a>
+                    </div>
+                </div>
+                <a href="camps.html">CAMPS</a>
+                <a href="praktisk-info.html">PRAKTISK INFO</a>
+                <a href="login.html" id="main-menu-login-mobile">LOGIN</a>
+                <div class="dropdown" id="main-menu-min-side-mobile">
+                    <a>MIN SIDE</a>
+                    <div class="dropdown-content">
+                        <a href="mit-program.html">MIT PROGRAM</a>
+                        <a href="log-ud.html">LOG UD</a>
+                    </div>
+                </div>
+                <a href="buy-billet.html"><button class="main-navigation-billet-desktop">KØB BILLET</button></a>
+            </nav>
+        </header>
+
+        <section id="forside-section-seperator"></section>
+
+        <section id="buy-billet">
+            <h2>KØB BILLET</h2>
+            <div id="buy-billet-header">
+                <div id="buy-billet-alle-dage">
+                    <h3 class="buy-billet-overskrift">PARTOUT BILLET - ALLE DAGE</h3>
+                    <div id="buy-billet-alle-dage-items">
+                        <div class="buy-billet-item">
+                            <div class="buy-billet-item-type">
+                                <h4>ALM. PARTOUTBILLET</h4>
+                            </div>
+                            <div class="buy-billet-item-pris">
+                                <h4>1495,00 DKK</h4>
+                            </div>
+                            <div class="buy-billet-item-knap">
+                                <a href="buy-alm-billet.html"><button class="buy-billet-item-knap-style">KØB BILLET</button></a>
+                            </div>
+                        </div>
+                        <div class="buy-billet-item">
+                            <div class="buy-billet-item-type">
+                                <h4>PARTOUTBILLET DELUXE</h4>
+                            </div>
+                            <div class="buy-billet-item-pris">
+                                <h4>1995,00 DKK</h4>
+                            </div>
+                            <div class="buy-billet-item-knap">
+                                <a href="buy-deluxe-billet.html"><button class="buy-billet-item-knap-style">KØB BILLET</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="buy-billet-enkeltdags">
+                    <h3 class="buy-billet-overskrift">ENKELTBILLETTER</h3>
+                    <div id="buy-billet-enkeltdags-items">
+                        <div class="buy-billet-item">
+                            <div class="buy-billet-item-type">
+                                <h4>BILLET - ONSDAG</h4>
+                            </div>
+                            <div class="buy-billet-item-pris">
+                                <h4>600,00 DKK</h4>
+                            </div>
+                            <div class="buy-billet-item-knap">
+                                <a href="buy-onsdag-billet.html"><button class="buy-billet-item-knap-style">KØB BILLET</button></a>
+                            </div>
+                        </div>
+                        <div class="buy-billet-item">
+                            <div class="buy-billet-item-type">
+                                <h4>BILLET - TORSDAG</h4>
+                            </div>
+                            <div class="buy-billet-item-pris">
+                                <h4>600,00 DKK</h4>
+                            </div>
+                            <div class="buy-billet-item-knap">
+                                <a href="buy-torsdag-billet.html"><button class="buy-billet-item-knap-style">KØB BILLET</button></a>
+                            </div>
+                        </div>
+                        <div class="buy-billet-item">
+                            <div class="buy-billet-item-type">
+                                <h4>BILLET - FREDAG</h4>
+                            </div>
+                            <div class="buy-billet-item-pris">
+                                <h4>600,00 DKK</h4>
+                            </div>
+                            <div class="buy-billet-item-knap">
+                                <a href="buy-fredag-billet.html"><button class="buy-billet-item-knap-style">KØB BILLET</button></a>
+                            </div>
+                        </div>
+                        <div class="buy-billet-item">
+                            <div class="buy-billet-item-type">
+                                <h4>BILLET - LØRDAG</h4>
+                            </div>
+                            <div class="buy-billet-item-pris">
+                                <h4>600,00 DKK</h4>
+                            </div>
+                            <div class="buy-billet-item-knap">
+                                <a href="buy-loerdag-billet.html"><button class="buy-billet-item-knap-style">KØB BILLET</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="nyhedsbrev-footer">
+            <h2>TILMELD NYHEDSBREV</h2>
+            <h4>Få seneste nyt sendt direkte til din indbakke</h4>
+            <p id="nyhedsbrev-error"></p>
+            <form onsubmit="validerNyhedsbrevDesktop()" class="nyhedsbrev-form-desktop" id="nyhedsbrev-form-desktop">
+                <input type="text" placeholder="INDTAST DIN EMAIL" id="nyhedsbrev-email-desktop">
+                <input type="submit" value="TILMELD NYHEDSBREV">
+            </form>
+            <form onsubmit="validerNyhedsbrevMobile()" class="nyhedsbrev-form-mobile" id="nyhedsbrev-form-mobile">
+                <input type="text" placeholder="DIN MAIL" id="nyhedsbrev-email-mobile">
+                <input type="submit" value="TILMELD">
+            </form>
+        </section>
+
+        <section class="footer-section-seperator">
+            <img src="images/Hancock-kvalitet-logo.png" alt="hancock logo med rød høne">
+            <p>- smag forskellen ...</p>
+        </section>
+
+        </div>
+        <script src="js/buyTicket.js"></script>
+        <script src="js/menu-fixer.js"></script>
+        <script src="js/nyhedsbrev.js"></script>
+</body>
+
+</html>
